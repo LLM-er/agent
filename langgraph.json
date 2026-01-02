@@ -1,0 +1,27 @@
+{
+  "$schema": "https://langgra.ph/schema.json",
+  "dependencies": [
+    ".",
+    "langchain",
+    "langgraph",
+    "langchain-core",
+    "langchain-community"
+  ],
+  "graphs": {
+    "agent": "./src/agent/agent.py:agent"
+  },
+  "env": ".env",
+  "runtime": {
+    "max_workers": 1,
+    "worker_timeout": 600
+  },
+  "store": {
+    "module": "inmem"
+  },
+  "checkpointer": {
+    "module": "inmem"
+  },
+  "image_distro": "wolfi",
+  "python_version": "3.12"
+
+}
